@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model: fit test</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        margin-bottom: 20px;
+      }
+
+      model {
+        background-color: #007700;
+      }
+
+      model img {
+        width: 400px;
+        height: 400px;
+      }
+
+      #model1 {
+        width: 400px;
+        height: 400px;
+      }
+
+      #model2 {
+        width: 400px;
+        height: 600px;
+      }
+
+      #model2 img {
+        margin-top: 100px;
+      }
+
+      #model3 {
+        width: 600px;
+        height: 400px;
+      }
+
+      #model3 img {
+        margin-left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Model: Fit test</h1>
+    <hr />
+    <pre>
+&lt;model alt="A model of a cube"&gt;
+  &lt;source src="./cube.usdz" type="model/vnd.usdz+zip" /&gt;
+  &lt;source src="./cube.glb" type="model/gltf-binary" /&gt;
+&lt;/model&gt;
+</pre
+    >
+
+    <div class="container">
+      <model id="model1" alt="A model of a cube">
+        <source src="./cube.usdz" type="model/vnd.usdz+zip" />
+        <source src="./cube.glb" type="model/gltf-binary" />
+        <img src="./cube.png" alt="An image of a model of a cube" />
+      </model>
+    </div>
+
+    <div class="container">
+      <model id="model2" alt="A model of a cube">
+        <source src="./cube.usdz" type="model/vnd.usdz+zip" />
+        <source src="./cube.glb" type="model/gltf-binary" />
+        <img src="./cube.png" alt="An image of a model of a cube" />
+      </model>
+    </div>
+
+    <div class="container">
+      <model id="model3" alt="A model of a cube">
+        <source src="./cube.usdz" type="model/vnd.usdz+zip" />
+        <source src="./cube.glb" type="model/gltf-binary" />
+        <img src="./cube.png" alt="An image of a model of a cube" />
+      </model>
+    </div>
+  </body>
+</html>
