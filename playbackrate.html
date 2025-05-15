@@ -22,7 +22,9 @@
     <model autoplay loop>
       <source src="./teapot.usdz" type="model/vnd.usdz+zip" />
       <source src="./teapot.glb" type="model/gltf-binary" />
-      <img src="./teapot-fallback-animated.jpg" alt="An image of a model of a teapot with a creature inside" >
+      <img
+        src="./teapot-fallback-animated.jpg"
+        alt="An image of a model of a teapot with a creature inside" />
     </model>
     <br />
     Playback rate:
@@ -31,12 +33,12 @@
   </body>
 
   <script type="module">
-    const model = document.querySelector("model");
+    const model = document.querySelector('model');
     await model.ready;
     model.playbackRate = 1;
-    rate.addEventListener("input", (e) => {
+    rate.addEventListener('input', (e) => {
       var rateSq = Math.pow(rate.value, 2);
-      ratelabel.innerHTML = (rateSq * 100).toFixed() + "%";
+      ratelabel.innerHTML = (rateSq * 100).toFixed() + '%';
       model.playbackRate = rateSq;
     });
   </script>

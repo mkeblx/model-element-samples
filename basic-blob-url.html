@@ -17,25 +17,31 @@
 &lt;/model&gt;
     </pre>
     <h2>JavaScript</h2>
-<pre>
+    <pre>
 const model = document.querySelector('model');
 const {src, type} = model.dataset;
 const bytes = await (await fetch(src)).bytes();
 const srcString = URL.createObjectURL(new Blob([bytes], {type}));
 model.setAttribute('src', srcString);
-</pre>
+</pre
+    >
 
-    <model draggable="true" alt="A model of a teapot" data-type="model/vnd.usdz+zip"  data-src="./teapot.usdz">
-      <img src="./teapot-fallback-black.jpg" alt="An image of a model of a teapot" >
+    <model
+      draggable="true"
+      alt="A model of a teapot"
+      data-type="model/vnd.usdz+zip"
+      data-src="./teapot.usdz">
+      <img
+        src="./teapot-fallback-black.jpg"
+        alt="An image of a model of a teapot" />
     </model>
   </body>
 
-  
   <script type="module">
     const model = document.querySelector('model');
-    const {src, type} = model.dataset;
+    const { src, type } = model.dataset;
     const bytes = await (await fetch(src)).bytes();
-    const srcString = URL.createObjectURL(new Blob([bytes], {type}));
+    const srcString = URL.createObjectURL(new Blob([bytes], { type }));
     model.setAttribute('src', srcString);
   </script>
 </html>
