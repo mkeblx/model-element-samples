@@ -20,7 +20,9 @@
     <model alt="A model of a teapot with a hidden creature">
       <source src="./teapot.usdz" type="model/vnd.usdz+zip" />
       <source src="./teapot.glb" type="model/gltf-binary" />
-      <img src="./teapot-fallback-animated.jpg" alt="An image of a model of a teapot with a creature inside" >
+      <img
+        src="./teapot-fallback-animated.jpg"
+        alt="An image of a model of a teapot with a creature inside" />
     </model>
     <br />
     Current time:
@@ -28,11 +30,11 @@
     <input type="range" min="0" max="1" value="0" step="0.02" id="time" />
   </body>
 
-  <script type="module" >
-    const model = document.querySelector("model");
+  <script type="module">
+    const model = document.querySelector('model');
     await model.ready;
-    time.addEventListener("input", (e) => {
-      timelabel.innerHTML = (time.value * model.duration).toFixed(1) + "s";
+    time.addEventListener('input', (e) => {
+      timelabel.innerHTML = (time.value * model.duration).toFixed(1) + 's';
       model.currentTime = time.value * model.duration;
     });
   </script>

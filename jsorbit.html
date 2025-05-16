@@ -19,7 +19,9 @@
     <model alt="A model of a teapot">
       <source src="./teapot.usdz" type="model/vnd.usdz+zip" />
       <source src="./teapot.glb" type="model/gltf-binary" />
-      <img src="./teapot-fallback-black.jpg" alt="An image of a model of a teapot" >
+      <img
+        src="./teapot-fallback-black.jpg"
+        alt="An image of a model of a teapot" />
     </model>
     <div id="log"></div>
   </body>
@@ -66,32 +68,32 @@
         errors[err.message] = errors[err.message] || 0;
         errors[err.message]++;
         log.innerText =
-          "errors:" +
+          'errors:' +
           Object.keys(errors)
-            .map((type) => type + ":" + errors[type])
-            .join("<br>");
+            .map((type) => type + ':' + errors[type])
+            .join('<br>');
       }
     }
 
-    const model = document.querySelector("model");
+    const model = document.querySelector('model');
 
     await model.ready;
     initialXfo = model.entityTransform;
 
-    model.addEventListener("touchstart", (e) => {
+    model.addEventListener('touchstart', (e) => {
       e.preventDefault();
       e.stopImmediatePropagation();
-      document.body.classList.add("noscroll");
+      document.body.classList.add('noscroll');
     });
 
-    model.addEventListener("pointerdown", (e) => {
+    model.addEventListener('pointerdown', (e) => {
       pointerDown = true;
       startDragX = e.clientX - dx;
       startDragY = e.clientY;
       vX = 0;
     });
 
-    window.addEventListener("pointermove", (e) => {
+    window.addEventListener('pointermove', (e) => {
       if (pointerDown) {
         dx = e.clientX - startDragX;
         dy = e.clientY - startDragY;
@@ -100,7 +102,7 @@
       }
     });
 
-    window.addEventListener("pointerup", (e) => {
+    window.addEventListener('pointerup', (e) => {
       pointerDown = false;
       vX = curX - prevX;
     });
