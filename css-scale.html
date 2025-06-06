@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model: CSS scale test</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .scale {
+        transform: scale(0.5, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Model: CSS scale test</h1>
+    <hr />
+    <p>
+      This model has a CSS transform scale applied to it. Click the button to
+      toggle the scale.
+    </p>
+
+    <h2>CSS</h2>
+    <pre>
+.scale {
+  transform: scale(0.5, 1);
+}
+</pre
+    >
+
+    <h2>HTML</h2>
+    <pre>
+&lt;model alt="A model of a teapot" class="scale"&gt;
+  &lt;source src="./teapot.usdz" type="model/vnd.usdz+zip" /&gt;
+  &lt;source src="./teapot.glb" type="model/gltf-binary" /&gt;
+&lt;/model&gt;
+</pre
+    >
+
+    <model alt="A model of a teapot" class="scale">
+      <source src="./teapot.usdz" type="model/vnd.usdz+zip" />
+      <source src="./teapot.glb" type="model/gltf-binary" />
+      <img
+        src="./teapot-fallback-black.jpg"
+        alt="An image of a model of a teapot" />
+    </model>
+    <br />
+
+    <button id="toggle-scale">Toggle Scale</button>
+
+    <script type="module">
+      const model = document.querySelector('model');
+
+      const toggleScaleBtn = document.getElementById('toggle-scale');
+      toggleScaleBtn.addEventListener('click', () => {
+        model.classList.toggle('scale');
+      });
+    </script>
+  </body>
+</html>
