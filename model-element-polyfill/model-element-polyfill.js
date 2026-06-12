@@ -41180,6 +41180,7 @@ function applyFallback(el) {
       model:has(> .__model-element-fallback-canvas-f7a9c3e1__),
       model-polyfill:has(> .__model-element-fallback-canvas-f7a9c3e1__) {
         overflow: hidden;
+        contain: strict;
       }
       model > *:not(.__model-element-fallback-canvas-f7a9c3e1__):not(source),
       model-polyfill > *:not(.__model-element-fallback-canvas-f7a9c3e1__):not(source) {
